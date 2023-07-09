@@ -39,11 +39,10 @@
                     border: 1px solid #ccc;
                     border-radius: 15px;
                     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-                    padding: 20px;
                     opacity: 0;
                     transform: translateY(100%);
                     transition: opacity 0.3s, transform 0.3s;
-                     z-index: 9999;
+                    z-index: 9999;
                 }
 
                 .float-button.active {
@@ -55,6 +54,11 @@
                     opacity: 1;
                     transform: translateY(0);
                 }
+
+                .chatbot.closed {
+                    opacity: 0;
+                    transform: translateY(100%);
+                }
             </style>
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
             <title>Laptop Shop </title>
@@ -62,7 +66,9 @@
 
         <body>
             <div class="chatbot" id="chatbot">
-                <!-- Chatbot content goes here -->
+                <jsp:include page="include/chatbotHeader.jsp"></jsp:include>
+                <jsp:include page="include/chatbotContent.jsp"></jsp:include>
+                <jsp:include page="include/chatbotFooter.jsp"></jsp:include>
             </div>
             <jsp:include page="include/homeHeader.jsp"></jsp:include>
 
@@ -73,13 +79,14 @@
             <a href="#" class="float-button" id="floatButton">
                 <img src="Frontend/img/chatbot.png" alt="Button Image">
             </a>
-           
+
             <script>
                 var floatButton = document.getElementById("floatButton");
                 var chatbot = document.getElementById("chatbot");
 
                 floatButton.addEventListener("click", function () {
                     floatButton.classList.add("active");
+                    chatbot.classList.remove("closed");
                     chatbot.classList.add("active");
                 });
             </script>
