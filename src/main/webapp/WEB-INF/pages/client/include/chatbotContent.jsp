@@ -4,6 +4,7 @@
         <html>
 
         <head>
+            <link rel="stylesheet" href="Frontend/css/chatbox.css">
             <style>
                 .chat_content {
                     font-size: 13px;
@@ -20,8 +21,8 @@
         </head>
 
         <body>
-            <div class="chat_content">
-              <h1>Hello</h1>  
+            <div class="chatbox-message-content">
+                <h4 class="chatbox-message-no-message">You don't have message yet!</h4>
             </div>
 
 

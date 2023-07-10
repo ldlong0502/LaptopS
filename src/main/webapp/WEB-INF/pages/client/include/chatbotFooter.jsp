@@ -4,7 +4,9 @@
         <html>
 
         <head>
+            <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
             <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+            <link rel="stylesheet" href="Frontend/css/chatbox.css">
             <style>
                 .fab_field {
                     width: 100%;
@@ -58,12 +60,14 @@
         </head>
 
         <body>
-            <div class="fab_field">
-                <textarea id="chatSend" name="chat_message" placeholder="Send a message"
-                    class="chat_field chat_message"></textarea>
-                <a id="fab_send" class="fab"><i class="material-icons">send</i></a>
-            </div>
-           
+        <div class="chatbox-message-bottom">
+            <form action="#" class="chatbox-message-form">
+                <textarea rows="1" placeholder="Type message..." class="chatbox-message-input"></textarea>
+                <button type="submit" class="chatbox-message-submit"><i class='bx bx-send'></i></button>
+            </form>
+            
+        </div>
+        <script src="Frontend/js/chatbox.js"></script>
         </body>
 
         </html>
